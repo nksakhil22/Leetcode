@@ -1,0 +1,12 @@
+Worst case time complexity (O(n² × k log k):
+We are taking each element in the vector and comparing it with every other element by sorting both the strings. 
+If both sorted strings are the same, they are grouped together. Once every possibility is checked, 
+we simultaneously mark the corresponding indices as true in the visited array to make sure we do not create a new group with that element again. 
+Once the group is formed, it is pushed into result. Finally, result is returned.
+
+
+Optimal case Time complexity (O(n x logk):
+We are using an unordered_map. For each element, we sort it and use the sorted string as the key. 
+Strings that have the same sorted form are grouped together as values corresponding to that key. 
+After processing all elements, we iterate over the map and push each value list into a new vector called result.
+
